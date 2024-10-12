@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "cd packages/frontend && bun dev",
     "api": "cd packages/backend && bun dev",
-    "studio": "cd packages/backend && bunx drizzle-kit studio"
+    "studio": "cd packages/backend && bunx drizzle-kit studio",
+    "gen": "cd packages/backend && bunx drizzle-kit generate",
+    "migrate": "cd packages/backend && bunx drizzle-kit migrate",
+    "compose": "docker compose up -d"
   },
   "devDependencies": {
     "@types/bun": "latest"
