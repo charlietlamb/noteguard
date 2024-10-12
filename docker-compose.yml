@@ -1,0 +1,16 @@
+services:
+  stacked-db:
+    image: postgres
+    restart: always
+    container_name: noteguard-pg
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: noteguard
+      POSTGRES_DB: noteguard
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
